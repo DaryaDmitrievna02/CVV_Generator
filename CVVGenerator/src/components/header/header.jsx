@@ -5,10 +5,10 @@ function Header(){
 
 
     return(<>
-    <div className="bg-black">
+    <div className="h-28 bg-green-200">
     CVV
     
-    <Link to="/1">AA</Link>
+  
 
     </div>
 

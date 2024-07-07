@@ -12,9 +12,11 @@ function App() {
 
   return (
     <>
+
+<Header></Header>
      <BrowserRouter>
      <Routes>
-      <Route path='/' element={<Header></Header>}></Route>
+    
       <Route path='/1' element={<GeneratorPage></GeneratorPage>}></Route>
 
      </Routes>
