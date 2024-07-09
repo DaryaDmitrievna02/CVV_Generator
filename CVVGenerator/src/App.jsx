@@ -17,7 +17,7 @@ function App() {
      <BrowserRouter>
      <Routes>
     
-      <Route path='/1' element={<GeneratorPage></GeneratorPage>}></Route>
+      <Route path='/' element={<GeneratorPage></GeneratorPage>}></Route>
 
      </Routes>
      </BrowserRouter>

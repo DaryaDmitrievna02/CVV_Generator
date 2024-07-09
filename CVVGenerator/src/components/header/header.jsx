@@ -5,7 +5,7 @@ function Header(){
 
 
     return(<>
-    <div className="h-28 bg-green-200">
+    <div className="h-10 bg-green-200">
     CVV
     
   
