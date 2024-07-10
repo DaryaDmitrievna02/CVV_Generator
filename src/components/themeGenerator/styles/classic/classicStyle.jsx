@@ -49,12 +49,7 @@ const about = useContext(InputContext);
 
             <div className="Attainments text-left mb-5">
                 <h2 className="border-b-2 border-black p-1 mb-3" style={{borderColor: theme.lines}}>Навыки</h2>
-                <ul>
-                    <li>Телефон +375 29 843 12 21</li>
-                    <li>Телефон +375 29 843 12 21</li>
-                    <li>Телефон +375 29 843 12 21</li>
-                    <li>Телефон +375 29 843 12 21</li>
-                </ul>
+             <p>{about.skills}</p>
             </div>
         </div>
         <div className="skills bg-gray-300 p-5 w-2/3" style={{ color: theme.textReverse}}>

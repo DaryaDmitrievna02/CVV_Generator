@@ -72,8 +72,8 @@ console.log(about)
     <>
     <InputContext.Provider value={about}>
     <div className="flex-auto ">
-        <div className="flex px-5 bg-slate-500 h-full w-full justify-between">
-          <div className="py-5">
+        <div className="flex px-5 bg-slate-500 h-full w-full justify-between gap-10  max-xl:w-full max-lg:flex-col max-lg:text-xs">
+          <div className="py-5 w-full">
 
             {renderStage(page)}
 
@@ -93,7 +93,7 @@ console.log(about)
             </div>
           </div>
 
-          <div className="w-1/2 py-5 flex">
+          <div ref={componentRef} className="w-full h-full p-5  flex max-lg:w-full">
             <ThemeContext.Provider value={theme}>
               {renderSwitch(style)}
             </ThemeContext.Provider>

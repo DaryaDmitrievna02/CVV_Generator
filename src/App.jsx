@@ -6,6 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import GeneratorPage from './components/themeGenerator/generatorPage'
 import Header from './components/header/header'
 
+import './adaptive.scss'
+
 
 function App() {
 

@@ -11,3 +11,12 @@ body {
 }
 
 
+button{
+  padding: 5px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+
+  border: 1px solid cadetblue
+}
+
+

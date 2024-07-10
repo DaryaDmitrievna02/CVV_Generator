@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import './input.css'
+
 function FirstPage({ Input, About }) {
   const [selectLanguage, setSelectLanguage] = useState(languages[0]);
   const [selectLevel, setSelectLevel] = useState("A1");
@@ -22,7 +24,7 @@ function FirstPage({ Input, About }) {
 
   return (
     <>
-      <div className="flex flex-col gap-5 text-left">
+      <div className="flex flex-col gap-2 text-left">
         <div className="flex flex-col">
           <label>Photo</label>
           <input
@@ -61,8 +63,8 @@ function FirstPage({ Input, About }) {
           ></input>
         </div>
 
-        <div className="flex gap-5">
-          <div>
+        <div className="flex gap-5 w-full">
+          <div className="w-full">
             <div className="flex flex-col">
               <label>tel</label>
               <input
@@ -95,7 +97,7 @@ function FirstPage({ Input, About }) {
               ></input>
             </div>
           </div>
-          <div>
+          <div className="w-full">
             <div className="flex flex-col">
               <label>tel</label>
               <input
@@ -130,23 +132,24 @@ function FirstPage({ Input, About }) {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-5">
           <div>
             <label>Languages</label>
-            <select onChange={(e) => setSelectLanguage(e.target.value)}>
+            <select className="p-1 rounded-[5px]" onChange={(e) => setSelectLanguage(e.target.value)}>
               {languages.map((el, i) => {
-                return <option value={el}>{el}</option>;
+                return <option  value={el}>{el}</option>;
               })}
             </select>
 
             <label>LVL</label>
-            <select onChange={(e) => setSelectLevel(e.target.value)}>
+            <select className="p-1 rounded-[5px]" onChange={(e) => setSelectLevel(e.target.value)}>
               {["A1", "A2", "B1", "B2", "C1", "C2"].map((el, i) => {
                 return <option value={el}>{el}</option>;
               })}
             </select>
+            <button className="ml-2" onClick={handleAdd}>Add</button>
           </div>
-
+      
           {About.languages.map((e, i) => {
             return (
               <>
@@ -160,8 +163,20 @@ function FirstPage({ Input, About }) {
             );
           })}
 
-          <button onClick={handleAdd}>aa</button>
+          
         </div>
+
+<div>
+<label>Skills </label>
+<input
+            required
+            type="text"
+            value={About.skills}
+            onChange={(e) => Input({ ...About, skills: e.target.value })}
+          ></input>
+
+</div>
+
       </div>
     </>
   );

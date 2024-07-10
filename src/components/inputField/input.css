@@ -1,0 +1,14 @@
+input {
+  padding: 5px !important;
+  border-radius: 5px;
+}
+
+label {
+  color: rgba(8, 8, 8, 0.774);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 5px;
+}/*# sourceMappingURL=input.css.map */
