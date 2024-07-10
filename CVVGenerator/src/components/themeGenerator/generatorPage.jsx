@@ -23,12 +23,12 @@ function GeneratorPage() {
     photo:"../examplePhotos/User.jpg",
     firstName:"Иван",
     lastName: "Иванов",
-    about: "Я люблю пиццу и программировать",
+    about: "О себе",
     contacts: {
         tel: "+375 29 860 17 38", 
         mail: "ivanivanov@gmail.com"
     },
-    languages:"Русский",
+    languages:["Русский язык C2"],
     skills: "html, js, css, react"
   })
 
@@ -93,7 +93,7 @@ console.log(about)
             </div>
           </div>
 
-          <div ref={componentRef} className="w-1/2 py-5 flex">
+          <div className="w-1/2 py-5 flex">
             <ThemeContext.Provider value={theme}>
               {renderSwitch(style)}
             </ThemeContext.Provider>
