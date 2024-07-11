@@ -1,7 +1,23 @@
 input{
     padding: 5px !important;
     border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.288);
+
+    &:focus{
+
+        outline: 2px solid rgba(0, 0, 0, 0.308);
+    }
 }
+
+input[type="file"]{
+border: none;
+&:focus{
+    outline:none;
+}
+}
+
+
+
 
 label{
     color: rgba(8, 8, 8, 0.774);

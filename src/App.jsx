@@ -16,7 +16,7 @@ function App() {
     <>
 
 <Header></Header>
-     <BrowserRouter>
+     <BrowserRouter basename='/CVV_Generator/'>
      <Routes>
     
       <Route path='/' element={<GeneratorPage></GeneratorPage>}></Route>

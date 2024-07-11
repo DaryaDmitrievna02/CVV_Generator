@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import './input.css'
+import "./input.scss";
 
 function FirstPage({ Input, About }) {
   const [selectLanguage, setSelectLanguage] = useState(languages[0]);
@@ -35,7 +35,7 @@ function FirstPage({ Input, About }) {
           ></input>
         </div>
         <div className="flex flex-col">
-          <label>Name</label>
+          <label>Имя</label>
           <input
             required
             type="text"
@@ -44,7 +44,7 @@ function FirstPage({ Input, About }) {
           ></input>
         </div>
         <div className="flex flex-col">
-          <label>Last Name</label>
+          <label>Фамилия</label>
           <input
             required
             type="text"
@@ -54,77 +54,105 @@ function FirstPage({ Input, About }) {
         </div>
 
         <div className="flex flex-col">
-          <label>About</label>
+          <label>Возраст</label>
           <input
             required
             type="text"
-            value={About.about}
-            onChange={(e) => Input({ ...About, about: e.target.value })}
+            value={About.about["Возраст:"]}
+            onChange={(e) =>
+              Input({
+                ...About,
+                about: { ...About.about, "Возраст:": e.target.value },
+              })
+            }
+          ></input>
+          <label>Город</label>
+          <input
+            required
+            type="text"
+            value={About.about["Город:"]}
+            onChange={(e) =>
+              Input({
+                ...About,
+                about: { ...About.about, "Город:": e.target.value },
+              })
+            }
+          ></input>
+          <label>Адресс</label>
+          <input
+            required
+            type="text"
+            value={About.about["Адресс:"]}
+            onChange={(e) =>
+              Input({
+                ...About,
+                about: { ...About.about, "Адресс:": e.target.value },
+              })
+            }
           ></input>
         </div>
 
         <div className="flex gap-5 w-full">
           <div className="w-full">
             <div className="flex flex-col">
-              <label>tel</label>
+              <label>Телефон</label>
               <input
                 required
                 type="text"
-                value={About.contacts.tel}
+                value={About.contacts["Тел:"]}
                 onChange={(e) =>
                   Input({
                     ...About,
-                    contacts: {
-                      tel: e.target.value,
-                      mail: About.contacts.mail,
-                    },
+                    contacts: { ...About.contacts, "Тел:": e.target.value },
                   })
                 }
               ></input>
             </div>
             <div className="flex flex-col">
-              <label>mail</label>
+              <label>Почта</label>
               <input
                 required
                 type="text"
-                value={About.contacts.mail}
+                value={About.contacts["Почта:"][0]}
                 onChange={(e) =>
                   Input({
                     ...About,
-                    contacts: { mail: e.target.value, tel: About.contacts.tel },
+                    contacts: { ...About.contacts, "Почта:": e.target.value },
                   })
                 }
               ></input>
+
+             
             </div>
           </div>
           <div className="w-full">
             <div className="flex flex-col">
-              <label>tel</label>
+            <label>GitHub</label>
+            <input
+            required
+            type="text"
+            value={About.contacts["GitHub:"]}
+            onChange={(e) =>
+              Input({
+                ...About,
+                contacts: { ...About.contacts, "GitHub:": e.target.value },
+              })
+            }
+          ></input>
+            </div>
+            <div className="flex flex-col">
+            <label>Вторя почта</label>
               <input
                 required
                 type="text"
-                value={About.contacts.tel}
+                value={About.contacts["Почта:"][1]}
                 onChange={(e) =>
                   Input({
                     ...About,
                     contacts: {
-                      tel: e.target.value,
-                      mail: About.contacts.mail,
+                      ...About.contacts,
+                      "Почта:": [About.contacts["Почта:"][0], e.target.value],
                     },
-                  })
-                }
-              ></input>
-            </div>
-            <div className="flex flex-col">
-              <label>mail</label>
-              <input
-                required
-                type="text"
-                value={About.contacts.mail}
-                onChange={(e) =>
-                  Input({
-                    ...About,
-                    contacts: { mail: e.target.value, tel: About.contacts.tel },
                   })
                 }
               ></input>
@@ -135,21 +163,29 @@ function FirstPage({ Input, About }) {
         <div className="flex flex-col mt-5">
           <div>
             <label>Languages</label>
-            <select className="p-1 rounded-[5px]" onChange={(e) => setSelectLanguage(e.target.value)}>
+            <select
+              className="p-1 rounded-[5px]"
+              onChange={(e) => setSelectLanguage(e.target.value)}
+            >
               {languages.map((el, i) => {
-                return <option  value={el}>{el}</option>;
+                return <option value={el}>{el}</option>;
               })}
             </select>
 
             <label>LVL</label>
-            <select className="p-1 rounded-[5px]" onChange={(e) => setSelectLevel(e.target.value)}>
+            <select
+              className="p-1 rounded-[5px]"
+              onChange={(e) => setSelectLevel(e.target.value)}
+            >
               {["A1", "A2", "B1", "B2", "C1", "C2"].map((el, i) => {
                 return <option value={el}>{el}</option>;
               })}
             </select>
-            <button className="ml-2" onClick={handleAdd}>Add</button>
+            <button className="ml-2" onClick={handleAdd}>
+              Add
+            </button>
           </div>
-      
+
           {About.languages.map((e, i) => {
             return (
               <>
@@ -162,21 +198,17 @@ function FirstPage({ Input, About }) {
               </>
             );
           })}
-
-          
         </div>
 
-<div>
-<label>Skills </label>
-<input
+        <div>
+          <label>Skills </label>
+          <input
             required
             type="text"
             value={About.skills}
             onChange={(e) => Input({ ...About, skills: e.target.value })}
           ></input>
-
-</div>
-
+        </div>
       </div>
     </>
   );

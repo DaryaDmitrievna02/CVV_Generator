@@ -1,26 +1,26 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../../generatorPage";
 
-function DarkTheme() {
+function BlueTheme() {
+  console.log(useContext(ThemeContext));
+
   const setTheme = useContext(ThemeContext).setTheme;
 
   return (
     <>
       <button
-        className="w-10 h-10 bg-zinc-700"
+        className="w-10 h-10 bg-sky-700"
         onClick={() =>
           setTheme({
-            bg: "rgb(68 64 60 / var(--tw-bg-opacity))",
+            bg: "#156481",
             textWhite: "rgb(209 213 219 / var(--tw-bg-opacity))",
             lines: "rgb(209 213 219 / var(--tw-bg-opacity))",
-            textReverse: "rgb(68 64 60 / var(--tw-bg-opacity))",
+            textReverse: "#156481",
           })
         }
-      >
-        {" "}
-      </button>
+      ></button>
     </>
   );
 }
 
-export default DarkTheme;
+export default BlueTheme;
