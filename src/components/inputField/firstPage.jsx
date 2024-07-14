@@ -66,6 +66,8 @@ function FirstPage({ Input, About }) {
               })
             }
           ></input>
+          </div>
+          <div className="flex flex-col">
           <label>Город</label>
           <input
             required
@@ -78,6 +80,8 @@ function FirstPage({ Input, About }) {
               })
             }
           ></input>
+          </div>
+          <div className="flex flex-col">
           <label>Адресс</label>
           <input
             required
@@ -160,9 +164,10 @@ function FirstPage({ Input, About }) {
           </div>
         </div>
 
-        <div className="flex flex-col mt-5">
-          <div>
-            <label>Languages</label>
+        <div className="flex flex-col mt-5 flex-wrap">
+          <div className="select">
+        <div>
+        <label>Языки</label>
             <select
               className="p-1 rounded-[5px]"
               onChange={(e) => setSelectLanguage(e.target.value)}
@@ -171,8 +176,9 @@ function FirstPage({ Input, About }) {
                 return <option value={el}>{el}</option>;
               })}
             </select>
-
-            <label>LVL</label>
+        </div>
+   <div>
+   <label className="max-lg:mb-2">Уровень</label>
             <select
               className="p-1 rounded-[5px]"
               onChange={(e) => setSelectLevel(e.target.value)}
@@ -181,28 +187,35 @@ function FirstPage({ Input, About }) {
                 return <option value={el}>{el}</option>;
               })}
             </select>
+   </div>
+
+          
             <button className="ml-2" onClick={handleAdd}>
-              Add
+              Добавить
             </button>
           </div>
 
-          {About.languages.map((e, i) => {
+              <div className="flex flex-wrap my-3">
+              {About.languages.map((e, i) => {
             return (
               <>
-                <div className="flex gap-2 p-2">
-                  <div key={i}>{e}</div>
-                  <button key={e} onClick={() => handleDelete(e)}>
-                    delete
+                <div className="flex gap-2 m-1.5 px-2 py-1 items-center justify-center bg-gray-700/20 rounded-md">
+                  <p key={i}>{e}</p>
+                  <button className="bg-transparent shadow-none active:shadow-none active:border-none border-none pb-[1px] p-0 text-gray-800 font-bold" key={e} onClick={() => handleDelete(e)}>
+                    x
                   </button>
                 </div>
               </>
             );
           })}
+              </div>
+    
         </div>
 
         <div>
-          <label>Skills </label>
+          <label>Навыки </label>
           <input
+          className="w-full"
             required
             type="text"
             value={About.skills}

@@ -27,7 +27,23 @@ label{
 }
 
 
-button{
-    padding: 5px;
-    background-color: wheat;
+
+
+
+.select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>div>select{
+        outline: 2px solid rgba(0, 0, 0, 0.288);
+         margin: 0 10px 0 0;
+    }
+
+    &>div>label{
+       
+margin-right: 5px;
+    
+    }
 }
+

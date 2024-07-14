@@ -1,0 +1,21 @@
+"filename", "language", "CSS", "JavaScript JSX", "SCSS", "XML", "comment", "blank", "total"
+"c:\Users\Darya\Desktop\CVV\src\App.css", "CSS", 8, 0, 0, 0, 0, 6, 14
+"c:\Users\Darya\Desktop\CVV\src\App.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 10, 31
+"c:\Users\Darya\Desktop\CVV\src\adaptive.css", "CSS", 0, 0, 0, 0, 1, 0, 1
+"c:\Users\Darya\Desktop\CVV\src\adaptive.scss", "SCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\Darya\Desktop\CVV\src\assets\react.svg", "XML", 0, 0, 0, 1, 0, 0, 1
+"c:\Users\Darya\Desktop\CVV\src\components\header\header.jsx", "JavaScript JSX", 0, 9, 0, 0, 0, 9, 18
+"c:\Users\Darya\Desktop\CVV\src\components\inputField\firstPage.jsx", "JavaScript JSX", 0, 227, 0, 0, 0, 17, 244
+"c:\Users\Darya\Desktop\CVV\src\components\inputField\input.scss", "SCSS", 0, 0, 34, 0, 0, 16, 50
+"c:\Users\Darya\Desktop\CVV\src\components\inputField\inputContext.jsx", "JavaScript JSX", 0, 2, 0, 0, 0, 1, 3
+"c:\Users\Darya\Desktop\CVV\src\components\inputField\secondPage.jsx", "JavaScript JSX", 0, 45, 0, 0, 0, 11, 56
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\generatorPage.jsx", "JavaScript JSX", 0, 124, 0, 0, 0, 32, 156
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\styles\classic\classicStyle.jsx", "JavaScript JSX", 0, 113, 0, 0, 0, 12, 125
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\styles\styleSwitch.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\blue\blueTheme.jsx", "JavaScript JSX", 0, 22, 0, 0, 0, 5, 27
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\dark\darkTheme.jsx", "JavaScript JSX", 0, 23, 0, 0, 0, 4, 27
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\green\greenTheme.jsx", "JavaScript JSX", 0, 25, 0, 0, 0, 5, 30
+"c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\themeSwitch.jsx", "JavaScript JSX", 0, 16, 0, 0, 0, 5, 21
+"c:\Users\Darya\Desktop\CVV\src\index.css", "CSS", 19, 0, 0, 0, 0, 10, 29
+"c:\Users\Darya\Desktop\CVV\src\main.jsx", "JavaScript JSX", 0, 9, 0, 0, 0, 2, 11
+"Total", "-", 27, 636, 34, 1, 1, 147, 846

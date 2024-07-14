@@ -13,14 +13,22 @@ body {
 
 button{
   padding: 5px;
-  background-color: antiquewhite;
+  background-color: transparent; 
   border-radius: 5px;
 
-  border: 1px solid cadetblue
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  box-shadow: 0px 5px 10px 2px rgba(58, 58, 58, 0.2);
+  transition: 0.2s ease-in;
 }
 
 
-h1, h2,h3,h4,h5,h6,p,text {
+button:active{
+  border: 1px solid rgba(0, 0, 0, 0.418);
+  box-shadow: 0px 5px 10px 2px rgba(58, 58, 58, 0.2) inset;
+}
+
+
+h1, h2,h3,h4,h5,h6,p,text, li,ul,label,button, div, input {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
  

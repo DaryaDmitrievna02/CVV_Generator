@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../generatorPage";
 
 function BlueTheme() {
-  console.log(useContext(ThemeContext));
+
 
   const setTheme = useContext(ThemeContext).setTheme;
 

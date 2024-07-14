@@ -1,0 +1,61 @@
+Date : 2024-07-12 13:06:56
+Directory : c:\Users\Darya\Desktop\CVV\src
+Total : 19 files,  698 codes, 1 comments, 147 blanks, all 846 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JavaScript JSX |         13 |        636 |          0 |        114 |        750 |
+| SCSS           |          2 |         34 |          0 |         17 |         51 |
+| CSS            |          3 |         27 |          1 |         16 |         44 |
+| XML            |          1 |          1 |          0 |          0 |          1 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         19 |        698 |          1 |        147 |        846 |
+| . (Files)                                                                                |          6 |         57 |          1 |         29 |         87 |
+| assets                                                                                   |          1 |          1 |          0 |          0 |          1 |
+| components                                                                               |         12 |        640 |          0 |        118 |        758 |
+| components\header                                                                        |          1 |          9 |          0 |          9 |         18 |
+| components\inputField                                                                    |          4 |        308 |          0 |         45 |        353 |
+| components\themeGenerator                                                                |          7 |        323 |          0 |         64 |        387 |
+| components\themeGenerator (Files)                                                        |          1 |        124 |          0 |         32 |        156 |
+| components\themeGenerator\styles                                                         |          2 |        113 |          0 |         13 |        126 |
+| components\themeGenerator\styles (Files)                                                 |          1 |          0 |          0 |          1 |          1 |
+| components\themeGenerator\styles\classic                                                 |          1 |        113 |          0 |         12 |        125 |
+| components\themeGenerator\themes                                                         |          4 |         86 |          0 |         19 |        105 |
+| components\themeGenerator\themes (Files)                                                 |          1 |         16 |          0 |          5 |         21 |
+| components\themeGenerator\themes\blue                                                    |          1 |         22 |          0 |          5 |         27 |
+| components\themeGenerator\themes\dark                                                    |          1 |         23 |          0 |          4 |         27 |
+| components\themeGenerator\themes\green                                                   |          1 |         25 |          0 |          5 |         30 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                 | language       | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\Darya\Desktop\CVV\src\App.css                                                   | CSS            |          8 |          0 |          6 |         14 |
+| c:\Users\Darya\Desktop\CVV\src\App.jsx                                                   | JavaScript JSX |         21 |          0 |         10 |         31 |
+| c:\Users\Darya\Desktop\CVV\src\adaptive.css                                              | CSS            |          0 |          1 |          0 |          1 |
+| c:\Users\Darya\Desktop\CVV\src\adaptive.scss                                             | SCSS           |          0 |          0 |          1 |          1 |
+| c:\Users\Darya\Desktop\CVV\src\assets\react.svg                                          | XML            |          1 |          0 |          0 |          1 |
+| c:\Users\Darya\Desktop\CVV\src\components\header\header.jsx                              | JavaScript JSX |          9 |          0 |          9 |         18 |
+| c:\Users\Darya\Desktop\CVV\src\components\inputField\firstPage.jsx                       | JavaScript JSX |        227 |          0 |         17 |        244 |
+| c:\Users\Darya\Desktop\CVV\src\components\inputField\input.scss                          | SCSS           |         34 |          0 |         16 |         50 |
+| c:\Users\Darya\Desktop\CVV\src\components\inputField\inputContext.jsx                    | JavaScript JSX |          2 |          0 |          1 |          3 |
+| c:\Users\Darya\Desktop\CVV\src\components\inputField\secondPage.jsx                      | JavaScript JSX |         45 |          0 |         11 |         56 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\generatorPage.jsx               | JavaScript JSX |        124 |          0 |         32 |        156 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\styles\classic\classicStyle.jsx | JavaScript JSX |        113 |          0 |         12 |        125 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\styles\styleSwitch.jsx          | JavaScript JSX |          0 |          0 |          1 |          1 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\blue\blueTheme.jsx       | JavaScript JSX |         22 |          0 |          5 |         27 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\dark\darkTheme.jsx       | JavaScript JSX |         23 |          0 |          4 |         27 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\green\greenTheme.jsx     | JavaScript JSX |         25 |          0 |          5 |         30 |
+| c:\Users\Darya\Desktop\CVV\src\components\themeGenerator\themes\themeSwitch.jsx          | JavaScript JSX |         16 |          0 |          5 |         21 |
+| c:\Users\Darya\Desktop\CVV\src\index.css                                                 | CSS            |         19 |          0 |         10 |         29 |
+| c:\Users\Darya\Desktop\CVV\src\main.jsx                                                  | JavaScript JSX |          9 |          0 |          2 |         11 |
+| Total                                                                                    |                |        698 |          1 |        147 |        846 |
++------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

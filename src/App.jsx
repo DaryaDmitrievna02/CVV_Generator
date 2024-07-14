@@ -16,10 +16,10 @@ function App() {
     <>
 
 <Header></Header>
-     <BrowserRouter basename='/CVV_Generator/'>
+     <BrowserRouter >
      <Routes>
     
-      <Route path='/' element={<GeneratorPage></GeneratorPage>}></Route>
+      <Route path='/'  element={<GeneratorPage></GeneratorPage>}></Route>
 
      </Routes>
      </BrowserRouter>
