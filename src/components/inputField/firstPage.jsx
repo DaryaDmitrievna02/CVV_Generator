@@ -27,7 +27,7 @@ function FirstPage({ Input, About }) {
       <div className="flex flex-col gap-2 text-left">
         <div className="flex flex-col">
           <label>Photo</label>
-          <input
+          <input 
             type="file"
             onChange={(e) =>
               Input({ ...About, photo: URL.createObjectURL(e.target.files[0]) })
@@ -37,6 +37,7 @@ function FirstPage({ Input, About }) {
         <div className="flex flex-col">
           <label>Имя</label>
           <input
+          maxLength={20}
             required
             type="text"
             value={About.firstName}
@@ -46,6 +47,7 @@ function FirstPage({ Input, About }) {
         <div className="flex flex-col">
           <label>Фамилия</label>
           <input
+             maxLength={20}
             required
             type="text"
             value={About.lastName}
@@ -56,6 +58,7 @@ function FirstPage({ Input, About }) {
         <div className="flex flex-col">
           <label>Возраст</label>
           <input
+             maxLength={10}
             required
             type="text"
             value={About.about["Возраст:"]}
@@ -70,6 +73,7 @@ function FirstPage({ Input, About }) {
           <div className="flex flex-col">
           <label>Город</label>
           <input
+             maxLength={20}
             required
             type="text"
             value={About.about["Город:"]}
@@ -84,6 +88,7 @@ function FirstPage({ Input, About }) {
           <div className="flex flex-col">
           <label>Адресс</label>
           <input
+             maxLength={30}
             required
             type="text"
             value={About.about["Адресс:"]}
@@ -102,6 +107,7 @@ function FirstPage({ Input, About }) {
               <label>Телефон</label>
               <input
                 required
+                maxLength={10}
                 type="text"
                 value={About.contacts["Тел:"]}
                 onChange={(e) =>
@@ -116,6 +122,7 @@ function FirstPage({ Input, About }) {
               <label>Почта</label>
               <input
                 required
+                maxLength={30}
                 type="text"
                 value={About.contacts["Почта:"][0]}
                 onChange={(e) =>
@@ -133,6 +140,7 @@ function FirstPage({ Input, About }) {
             <div className="flex flex-col">
             <label>GitHub</label>
             <input
+               maxLength={50}
             required
             type="text"
             value={About.contacts["GitHub:"]}
@@ -148,6 +156,7 @@ function FirstPage({ Input, About }) {
             <label>Вторя почта</label>
               <input
                 required
+                maxLength={30}
                 type="text"
                 value={About.contacts["Почта:"][1]}
                 onChange={(e) =>
