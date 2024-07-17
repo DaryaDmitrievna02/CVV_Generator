@@ -10,17 +10,17 @@ function StyleSwitch() {
   return (
     <>
     <div className="flex flex-col items-start"> 
-    <h2 className="mb-5 font-bold text-gray-600">STYLES</h2>
+    <h2 className="mb-5 font-bold text-gray-600">Стиль:</h2>
       <div className="flex gap-5">
         <button
-          className="w-10 h-10 bg-sky-700"
+          className="w-10 h-10 bg-gray-800 text-white font-bold"
           onClick={() => setStyle(<ClassicStyle></ClassicStyle>)}
-        ></button>
+        >С</button>
 
         <button
-          className="w-10 h-10 bg-sky-700"
+          className="w-10 h-10 bg-gray-800 text-white font-bold"
           onClick={() => setStyle(<MiniStyle></MiniStyle>)}
-        ></button>
+        >M</button>
 
 
       </div>

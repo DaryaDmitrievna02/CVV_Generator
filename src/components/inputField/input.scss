@@ -32,8 +32,10 @@ label{
 
 .select{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 10px;
 
     &>div>select{
         outline: 2px solid rgba(0, 0, 0, 0.288);

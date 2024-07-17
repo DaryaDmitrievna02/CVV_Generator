@@ -19,7 +19,7 @@ function ClassicStyle() {
         style={{ backgroundColor: theme.bg, color: theme.textWhite }}
       >
         <div className="">
-          <img className="object-cover w-full h-56 " src={about.photo} alt="" />
+          <img className="object-cover w-full h-56 max-sm:h-36" src={about.photo} alt="" />
         </div>
 
         <div className="Name w-full my-2 text-left break-words flex flex-col">
@@ -36,7 +36,7 @@ function ClassicStyle() {
               return about.about[key] == "" ? (
                 ""
               ) : (
-                <div className="break-words">{key + " " + about.about[key]}</div>
+                <div key={key} className="break-words">{key + " " + about.about[key]}</div>
               );
             })}
           </div>
@@ -52,7 +52,7 @@ function ClassicStyle() {
           <ul>
             {Object.keys(about.contacts).map((key) => {
               return about.contacts[key] == "" ? null : (
-                <div className="break-words">{key + " " + about.contacts[key]}</div>
+                <div key={key} className="break-words">{key + " " + about.contacts[key]}</div>
               );
             })}
           </ul>
@@ -66,10 +66,11 @@ function ClassicStyle() {
             Знание языков
           </h2>
           <ul>
-            {about.languages.map((e) => {
-              return <li>{e}</li>;
+            {about.languages.map((language, index) => {
+              return <li key={index}>{language}</li>;
             })}
           </ul>
+
         </div>
 
         <div className="Attainments text-left mb-5">
@@ -90,31 +91,32 @@ function ClassicStyle() {
           <h2 className="font-extrabold text-2xl p-1 mb-3 max-lg:text-base">
             Образование
           </h2>
-          <ul>
-            {education.education.map((el) => {
-              return <li>{el}</li>;
+          <ul className="list-disc pl-4">
+            {education.education.map((educationItem, index) => {
+              return <li key={index}>{educationItem}</li>;
             })}
           </ul>
+
         </div>
 
         <div className="Languages text-left mb-5">
           <h2 className="font-extrabold text-2xl p-1 mb-3 max-lg:text-base">
             Курсы
           </h2>
-          <ul>
-            {education.courses.map((el) => {
-              return <li>{el}</li>;
+          <ul className="list-disc pl-4">
+            {education.courses.map((course, index) => {
+              return <li key={index}>{course}</li>;
             })}
           </ul>
         </div>
 
         <div className="Attainments text-left mb-5">
           <h2 className="font-extrabold text-2xl p-1 mb-3 max-lg:text-base">
-            Навыки
+           Опыт
           </h2>
-          <ul>
-            {education.experience.map((el) => {
-              return <li>{el}</li>;
+          <ul className="list-disc pl-4">
+            {education.experience.map((experienceItem, index) => {
+              return <li key={index}>{experienceItem}</li>;
             })}
           </ul>
         </div>

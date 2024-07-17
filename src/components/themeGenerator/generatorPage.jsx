@@ -10,9 +10,13 @@ import StyleSwitch from "./styles/styleSwitch";
 export const ThemeContext = createContext();
 export const EducationsContext = createContext();
 
+
+
+
 function GeneratorPage() {
   const [theme, setTheme] = useState({
     bg: "#156481",
+    bg80: "rgb(3 105 161 / 0.8)",
     textWhite: "rgb(209 213 219 / var(--tw-bg-opacity))",
     lines: "rgb(209 213 219 / var(--tw-bg-opacity))",
     textReverse: "#156481",
@@ -20,10 +24,10 @@ function GeneratorPage() {
 
   const [page, setPage] = useState(1);
 
-  const [style, setStyle] = useState(1);
+  const [style, setStyle] = useState(<ClassicStyle></ClassicStyle>);
 
   const [about, setAbout] = useState({
-    photo: "../examplePhotos/User.jpg",
+    photo: "./examplePhotos/User.jpg",
     firstName: "Иван",
     lastName: "Иванов",
     about: {
@@ -55,6 +59,14 @@ function GeneratorPage() {
           <>
             <ThemeSwitch></ThemeSwitch>
             <StyleSwitch></StyleSwitch>
+
+            <div>
+     
+    </div>
+          
+
+
+
           </>
         );
       case 2:
@@ -70,6 +82,19 @@ function GeneratorPage() {
             <SecondPage Input={setEducation} Education={education}></SecondPage>
           </>
         );
+        case 4:
+          return (
+            <>
+            <div className="flex items-center gap-3">
+              <h2>Печать резюме: </h2>
+            <ReactToPrint
+        trigger={() => <button className="w-18 h-10">Печать</button>}
+        content={() => componentRef.current}
+      />
+            </div>
+  
+            </>
+          )
       default:
         return "error renderStage";
     }
@@ -85,12 +110,12 @@ function GeneratorPage() {
                 <div className="p-2 pb-10">{renderStage(page)}</div>
 
                 <div className="flex justify-between absolute w-full bottom-0 mb-5">
-                  <button onClick={page < 2 ? false : () => setPage(page - 1)}>
-                    prev
-                  </button>
-                  <button onClick={page > 4 ? false : () => setPage(page + 1)}>
-                    next
-                  </button>
+                 {page == 1?  <></>: <button onClick={page < 2 ? false : () => setPage(page - 1)}>
+                    Назад
+                  </button>}
+                 { page==4 ? <></> : <button onClick={page > 3 ? false : () => setPage(page + 1)}>
+                   Далее
+                  </button>}
                 </div>
               </div>
 
@@ -105,12 +130,9 @@ function GeneratorPage() {
         </ThemeContext.Provider>
       </InputContext.Provider>
 
-      <ReactToPrint
-        trigger={() => <button>Print this out!</button>}
-        content={() => componentRef.current}
-      />
+   
 
-      <div className="h-10">footer</div>
+
     </>
   );
 }

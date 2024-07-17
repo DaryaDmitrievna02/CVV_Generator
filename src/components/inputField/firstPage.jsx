@@ -40,7 +40,7 @@ function FirstPage({ Input, About }) {
           maxLength={20}
             required
             type="text"
-            value={About.firstName}
+          
             onChange={(e) => Input({ ...About, firstName: e.target.value })}
           ></input>
         </div>
@@ -50,7 +50,7 @@ function FirstPage({ Input, About }) {
              maxLength={20}
             required
             type="text"
-            value={About.lastName}
+          
             onChange={(e) => Input({ ...About, lastName: e.target.value })}
           ></input>
         </div>
@@ -61,7 +61,7 @@ function FirstPage({ Input, About }) {
              maxLength={10}
             required
             type="text"
-            value={About.about["Возраст:"]}
+           
             onChange={(e) =>
               Input({
                 ...About,
@@ -76,7 +76,7 @@ function FirstPage({ Input, About }) {
              maxLength={20}
             required
             type="text"
-            value={About.about["Город:"]}
+          
             onChange={(e) =>
               Input({
                 ...About,
@@ -91,7 +91,7 @@ function FirstPage({ Input, About }) {
              maxLength={30}
             required
             type="text"
-            value={About.about["Адресс:"]}
+           
             onChange={(e) =>
               Input({
                 ...About,
@@ -101,15 +101,15 @@ function FirstPage({ Input, About }) {
           ></input>
         </div>
 
-        <div className="flex gap-5 w-full">
+        <div className="flex gap-5 w-full max-sm:flex-wrap">
           <div className="w-full">
             <div className="flex flex-col">
               <label>Телефон</label>
               <input
                 required
-                maxLength={10}
+                maxLength={18}
                 type="text"
-                value={About.contacts["Тел:"]}
+             
                 onChange={(e) =>
                   Input({
                     ...About,
@@ -124,7 +124,7 @@ function FirstPage({ Input, About }) {
                 required
                 maxLength={30}
                 type="text"
-                value={About.contacts["Почта:"][0]}
+               
                 onChange={(e) =>
                   Input({
                     ...About,
@@ -143,7 +143,7 @@ function FirstPage({ Input, About }) {
                maxLength={50}
             required
             type="text"
-            value={About.contacts["GitHub:"]}
+           
             onChange={(e) =>
               Input({
                 ...About,
@@ -152,7 +152,7 @@ function FirstPage({ Input, About }) {
             }
           ></input>
             </div>
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
             <label>Вторя почта</label>
               <input
                 required
@@ -169,7 +169,7 @@ function FirstPage({ Input, About }) {
                   })
                 }
               ></input>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -182,7 +182,7 @@ function FirstPage({ Input, About }) {
               onChange={(e) => setSelectLanguage(e.target.value)}
             >
               {languages.map((el, i) => {
-                return <option value={el}>{el}</option>;
+                return <option key={i} value={el}>{el}</option>;
               })}
             </select>
         </div>
@@ -193,7 +193,7 @@ function FirstPage({ Input, About }) {
               onChange={(e) => setSelectLevel(e.target.value)}
             >
               {["A1", "A2", "B1", "B2", "C1", "C2"].map((el, i) => {
-                return <option value={el}>{el}</option>;
+                return <option key={i} value={el}>{el}</option>;
               })}
             </select>
    </div>
@@ -208,7 +208,7 @@ function FirstPage({ Input, About }) {
               {About.languages.map((e, i) => {
             return (
               <>
-                <div className="flex gap-2 m-1.5 px-2 py-1 items-center justify-center bg-gray-700/20 rounded-md">
+                <div key={i} className="flex gap-2 m-1.5 px-2 py-1 items-center justify-center bg-gray-700/20 rounded-md">
                   <p key={i}>{e}</p>
                   <button className="bg-transparent shadow-none active:shadow-none active:border-none border-none pb-[1px] p-0 text-gray-800 font-bold" key={e} onClick={() => handleDelete(e)}>
                     x
