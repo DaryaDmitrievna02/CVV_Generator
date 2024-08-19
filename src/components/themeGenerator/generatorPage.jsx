@@ -36,7 +36,7 @@ function GeneratorPage() {
       "Адресс:": "Ул. Ежи гедройца 12",
     },
     contacts: {
-      "Тел:": "+375 29 860 17 38",
+      "Тел:": "+375 29 123 12 12",
       "Почта:": ["ivanivanov@gmail.com"],
       "GitHub:": "",
     },
@@ -45,9 +45,9 @@ function GeneratorPage() {
   });
 
   const [education, setEducation] = useState({
-    education: ["sd", "aaa"],
-    courses: ["coursera"],
-    experience: ["sdfsdsdfsdfsdf"],
+    education: ["УО Белорусский государственный университет информатики и радиоэлектроники"],
+    courses: ["Профессиональная сертификация 'IBM Front-End Developer'"],
+    experience: ["-"],
   });
 
   const componentRef = useRef();
